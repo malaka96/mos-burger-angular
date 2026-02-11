@@ -1,6 +1,11 @@
-<p>dashboard-component works!</p>
-<div>
-  @for (filter of filters; track $index) {
-    <app-chip [label]="filter" [icon]="'fastfood'"></app-chip>
-  }
+<div class="flex h-screen">
+  <!-- Left Navbar -->
+  <app-left-navbar class="w-20 bg-gray-900"></app-left-navbar>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-4">
+    @for (filter of filters; track $index) {
+      <app-chip [label]="filter" [icon]="'fastfood'"></app-chip>
+    }
+  </div>
 </div>
